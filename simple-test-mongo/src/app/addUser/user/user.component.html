@@ -1,0 +1,40 @@
+<div class="container">
+  <form class="row g-3 my-5" #newUser="ngForm" (ngSubmit)="onSubmit()">
+    <div class="col-md-6">
+      <label for="nome" class="form-label">Nome</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nome"
+        name="nome"
+        ngModel
+        required
+        #marca="ngModel"
+      />
+    </div>
+    <div class="col-md-6">
+      <label for="cognome" class="form-label">Congnome</label>
+      <input
+        type="text"
+        class="form-control"
+        id="cognome"
+        name="cognome"
+        ngModel
+        required
+        #marca="ngModel"
+      />
+    </div>
+    <div class="col-md-6">
+      <label for="email" class="form-label">Email</label>
+      <input
+        type="text"
+        class="form-control"
+        id="email"
+        name="email"
+        ngModel
+        required
+        #marca="ngModel"
+      />
+    </div>
+  </form>
+</div>
