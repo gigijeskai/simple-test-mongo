@@ -6,10 +6,10 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserComponent } from './users/user/user.component';
-import { AddUserComponent } from './addUser/addUser/addUser.component';
+import { AddUserComponent } from './addUser/add-user/add-user.component';
 
 @NgModule({
-  declarations: [AppComponent, AddUserComponent, UserComponent],
+  declarations: [AppComponent, UserComponent, AddUserComponent],
   providers: [],
   bootstrap: [AppComponent],
   imports: [
