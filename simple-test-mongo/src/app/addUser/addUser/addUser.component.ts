@@ -8,7 +8,7 @@ import { UsersSrvService } from 'src/app/services/users-srv.service';
   styleUrls: ['./addUser.component.scss'],
 })
 export class AddUserComponent implements OnInit {
-  @ViewChild('newAnnouncement') form!: NgForm;
+  @ViewChild('newUser') form!: NgForm;
   constructor(private usersSrv: UsersSrvService) {}
 
   ngOnInit(): void {}
