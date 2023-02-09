@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IUser } from 'src/app/interfaces/i-user';
 import { UsersSrvService } from 'src/app/services/users-srv.service';
 
 @Component({
@@ -8,6 +9,7 @@ import { UsersSrvService } from 'src/app/services/users-srv.service';
 })
 export class UserComponent implements OnInit {
   constructor(private usersSrv: UsersSrvService) {}
+  users?: IUser[];
 
   ngOnInit(): void {
     this.usersSrv.getUsers().subscribe((data) => {

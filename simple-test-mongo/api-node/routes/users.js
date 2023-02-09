@@ -1,28 +1,23 @@
 import express from "express";
 
+import {
+  insertUser,
+  getAllUsers,
+  getUserByID,
+  deleteUser,
+  updateUser,
+} from "../controllers/users";
+
 const router = express.Router();
 
-let users = [
-  {
-    nome: "Luca",
-    cognome: "Rossi",
-    email: "luca.rossi@gmail.it",
-  },
-  {
-    nome: "Luca",
-    cognome: "Rosi",
-    email: "luca.rosi@gmail.it",
-  },
-];
+router.get("/", getAllUsers);
 
-router.get("/", (req, res) => {
-  console.log(users);
-  res.send(users);
-});
+router.post("/", insertUser);
 
-router.post("/", (req, res) => {
-  console.log(req.body);
-  res.send("inserisco utente");
-});
+router.get("/:id", getUserByID);
+
+router.delete("/:id", deleteUser);
+
+router.patch("/:id", updateUser);
 
 export default router;
