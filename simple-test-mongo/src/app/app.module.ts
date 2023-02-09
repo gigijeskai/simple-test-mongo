@@ -7,10 +7,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserComponent } from './users/user/user.component';
 import { AddUserComponent } from './addUser/add-user/add-user.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UsersSrvService } from './services/users-srv.service';
 
 @NgModule({
   declarations: [AppComponent, UserComponent, AddUserComponent],
-  providers: [],
+  providers: [UsersSrvService],
   bootstrap: [AppComponent],
   imports: [
     BrowserModule,
@@ -18,6 +20,7 @@ import { AddUserComponent } from './addUser/add-user/add-user.component';
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
 })
 export class AppModule {}

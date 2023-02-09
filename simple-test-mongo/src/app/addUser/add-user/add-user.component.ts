@@ -9,13 +9,13 @@ import { UsersSrvService } from 'src/app/services/users-srv.service';
 })
 export class AddUserComponent implements OnInit {
   @ViewChild('newUser') form!: NgForm;
-  constructor() {}
+  constructor(private usersSrv: UsersSrvService) {}
 
   ngOnInit(): void {}
   onSubmit() {
-    // this.userSrv
-    //   .addUser(this.form.value)
-    //   .subscribe((user) => this.userSrv.users?.push(user));
-    // return this.form.reset();
+    this.usersSrv
+      .addUser(this.form.value)
+      .subscribe((user) => this.usersSrv.users?.push(user));
+    return this.form.reset();
   }
 }
