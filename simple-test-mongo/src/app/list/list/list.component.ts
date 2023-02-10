@@ -9,10 +9,12 @@ import { ListSrvService } from 'src/app/services/list-srv.service';
 export class ListComponent implements OnInit {
   users?: any[];
   constructor(private listSrv: ListSrvService) {
-    this.listSrv.getData().subscribe((data) => {
-      this.users = data;
-    });
+    // this.listSrv.getData().subscribe((data) => {
+    //   this.users = data;
+    // });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.users = this.listSrv.users;
+  }
 }
