@@ -7,8 +7,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { InputComponent } from './input/input/input.component';
+import { ListComponent } from './list/list/list.component';
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, InputComponent, ListComponent],
   providers: [],
   bootstrap: [AppComponent],
   imports: [
